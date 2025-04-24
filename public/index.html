@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4K–8K Video Downloader</title>
+  <style>
+    /* Yeh full screen setup mujhe tere pyaar jaisa lagta hai — har jagah cha gaya 💖 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Background video itna cinematic hai — Bollywood bhi sharma jaaye 🎥🌌 */
+    video.background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Center of attention — just like you in my life 😘 */
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.4); /* Thoda dark, thoda mysterious... jaise raat ko teri yaadein 😭 */
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow bhi laga liya, swag complete 😎 */
+    }
+
+    input, select, button {
+      padding: 15px;
+      margin: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: #f9f9f9; /* Soft as your smile ☁️✨ */
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold; /* Kyunki confidence toh hona chahiye 💪 */
+    }
+
+    button:hover {
+      background-color: #218838;
+      transform: scale(1.05); /* Thoda zoom in, thoda drama 💃 */
+      transition: 0.3s;
+    }
+  </style>
+
+  <script>
+    function downloadVideo() {
+      const url = document.getElementById('url').value;
+      const quality = document.getElementById('quality').value;
+
+      if (!url.trim()) {
+        alert("Please enter a YouTube video URL."); // Bhai bina URL ke download kaise hoga? 😭
+        return;
+      }
+
+      // URL encode kar diya, waise hi jaise main tere pyar mein khud ko secure kar leta hu 💘
+      window.location.href = `/download?url=${encodeURIComponent(url)}&quality=${encodeURIComponent(quality)}`;
+    }
+  </script>
+</head>
+<body>
+  <video class="background-video" autoplay loop muted>
+    <source src="video/2.mp4" type="video/mp4">  
+    <!-- I AM FREE hai HAI CODER FROM HEAVNs 505 ERROR 😂👼 Error toh gaya, coder aa gaya! -->
+    Your browser does not support the video tag.
+  </video>
+
+  <!--   *
+        ***      M!1000 Hai Hai Don't Inspect me 😂
+      *******
+    ********** -->
+  
+  <div class="content">
+    <h1>🎬 YouTube Video Downloader (720p–8K)</h1>
+    <input type="text" id="url" placeholder="Enter YouTube video URL" size="50" />
+    
+    <select id="quality">
+      <option value="best">Auto Best</option> <!-- Default toh best hona chahiye — jaise tu meri zindagi mein 😍 -->
+      <option value="720p">720p</option>
+      <option value="1080p">1080p</option>
+      <option value="2160p">4K (2160p)</option>
+      <option value="4320p">8K (4320p)</option> <!-- 8K dekh ke aankhon ko sukoon milta hai, jaise tu mil jaaye toh 🥺 -->
+    </select>
+    
+    <br />
+    <button onclick="downloadVideo()">Download</button> 
+    <!-- Button so hot it needs its own fan 😎🔥
+         Click karte hi full action mode on, jaise tu dance floor pe 💃 -->
+  </div>
+</body>
+</html>

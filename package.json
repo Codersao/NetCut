@@ -1,0 +1,25 @@
+{
+  "name": "downloadonlinevideo",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "echo 'FFmpeg should be available on Render'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codersao/DownloadOnlineVideo.git"
+  },
+  "keywords": ["youtube", "downloader", "video", "yt-dlp", "express", "codersao"],
+  "author": "Jatin Ghoyal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Codersao/DownloadOnlineVideo/issues"
+  },
+  "homepage": "https://github.com/Codersao/DownloadOnlineVideo#readme",
+  "description": "A 4K–8K YouTube video downloader built with Node.js and yt-dlp-exec",
+  "dependencies": {
+    "express": "^5.1.0",
+    "yt-dlp-exec": "^1.0.2"
+  }
+}
